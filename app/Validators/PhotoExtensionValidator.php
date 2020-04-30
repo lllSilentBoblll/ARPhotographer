@@ -1,0 +1,32 @@
+<?php
+
+
+namespace App\Validators;
+
+
+use App\Enum\PhotoFormatsEnum;
+use App\Exceptions\UnsupportedPhotoFormatException;
+use Illuminate\Http\UploadedFile;
+
+class PhotoExtensionValidator
+{
+    /**
+     * Проверяем на соответствие расширения файла
+     * File extension validation
+
+     *
+     * @param $key
+     * @param UploadedFile $photo
+     *
+     * @throws UnsupportedPhotoFormatException
+     */
+    public function checkExtension(UploadedFile $photo, $key = null)
+    {
+        if (!array_key_exists($photo->extension(), PhotoFormatsEnum::ALLOWED_FORMATS)){
+            $message = 'Неверный формат ' . (is_null($key)
+                    ? 'файла (' . $photo->getClientOriginalName() . ')'
+                    : '-го файла (' . $photo->getClientOriginalName() . ')' );
+            throw new UnsupportedPhotoFormatException($message);
+        }
+    }
+}
