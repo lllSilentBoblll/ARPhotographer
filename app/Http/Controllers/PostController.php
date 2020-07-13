@@ -17,7 +17,7 @@ class PostController extends SiteController
     }
 
     /**
-     * @return PostController
+     * @return \Illuminate\View\View
      * @throws \Throwable
      */
     public function index()

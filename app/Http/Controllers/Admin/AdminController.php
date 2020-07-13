@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * Class AdminController
+ * @package App\Http\Controllers\Admin
+ */
 class AdminController extends Controller
 {
     //

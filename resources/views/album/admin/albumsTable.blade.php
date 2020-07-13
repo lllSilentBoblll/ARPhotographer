@@ -45,7 +45,7 @@
                     <td>
     {{--                    <img width="200px" height="200px" src="{{ asset('album/images/gallery/'.$album->albumImg)}}" --}}
     {{--                          class="rounded float-left" alt="..."> --}}
-                        <img class="adminPanel"
+                        <img height="80px" class="adminPanel"
                              src="{{ isset($album->album_img) ?
                          asset('https://res.cloudinary.com/gallerystorage9oi8/image/upload/v1582564847/'
                          . $album->album_img) : asset('album/images/cover.jpg')}}"/>

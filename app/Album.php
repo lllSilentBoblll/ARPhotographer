@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class Album
+ * @package App
+ */
 class Album extends Model
 {
     use SoftDeletes;

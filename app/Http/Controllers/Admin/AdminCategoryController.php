@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Http\Requests\CategoryCreateRequest;
 use App\Repositories\CategoryRepository;
-use Cloudinary\Uploader;
+use App\Services\CategoryEditor;
+use App\Validators\CategoryValidator;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
+use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
@@ -18,15 +18,22 @@ class AdminCategoryController extends AdminController
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
 
-    private $categoryRepository;
+    private CategoryRepository $categoryRepository;
+    private CategoryEditor $editor;
+    private CategoryValidator $categoryValidator;
 
-    public function __construct(CategoryRepository $categoryRepository, Uploader $api)
+    public function __construct(
+        CategoryRepository $categoryRepository,
+        CategoryEditor $editor,
+        CategoryValidator $categoryValidator)
     {
         parent::__construct();
         $this->categoryRepository = $categoryRepository;
+        $this->editor = $editor;
+        $this->categoryValidator = $categoryValidator;
     }
 
     /**
@@ -92,20 +99,11 @@ class AdminCategoryController extends AdminController
      */
     public function update(Request $request, $id)
     {
-        //проверка которая не будет выдавать ошибку замены названия этой же категории на такое же название
-        // вот это все легко выноситься в отдельный класс, да это понятно что вынести можно, а вот куда
-        // что бы это выглядило правильно, вот в доке говорится что создается файл
-        $validatedData = Validator::make($request->all(), [
-            'title' => [
-                'required',
-                Rule::unique('categories')->ignore($id),
-            ],
-        ]);
+        $validatedData = $this->categoryValidator->validate($request, $id);
         if ($validatedData->fails()){
             return back()->withErrors($validatedData)->withInput();
         }
-        $category = $this->categoryRepository->getById($id);
-        $category->update($request->all());
+        $this->editor->updateCategory($request, $id);
         return redirect()->route('adminCategoryIndex')->with(['success' => 'Категория изменена']);
     }
 
@@ -115,8 +113,7 @@ class AdminCategoryController extends AdminController
      */
     public function destroy($id)
     {
-        \DB::table('albums')->where('category_id', $id)->insert([['category_id' => 1]]);
-        $result = Category::destroy($id);
+        $result = $this->editor->deleteCategory($id);
         if ($result){
             return redirect()->route('adminCategoryIndex')->with(['success' => 'Категория удалена']);
         }else{

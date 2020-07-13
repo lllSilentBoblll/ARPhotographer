@@ -12,10 +12,10 @@ use Illuminate\Http\Request;
 
 class AlbumEditor
 {
-    private $api;
-    private $albumRepository;
-    private $photoRepository;
-    private $photoValidator;
+    private Uploader $api;
+    private AlbumsRepository $albumRepository;
+    private PhotosRepository $photoRepository;
+    private PhotoExtensionValidator $photoValidator;
 
     /**
      * AlbumUpdater constructor.
@@ -62,9 +62,7 @@ class AlbumEditor
                 $imgNames[] = ['imgName' => $imgName . '.' . $photo->extension()]; //наполнение массива с именами файлов для заполнения поля imgName в таблице Photos
                 $this->api->upload($photo, ["public_id" => $imgName]);
             }
-
             $this->albumRepository->writePhotosToDB($imgNames, $id);
-
         }
     }
 
@@ -80,14 +78,14 @@ class AlbumEditor
     {
             $albumImg = $request->file('album_img');
             $this->photoValidator->checkExtension($albumImg);
-            $newAlbumCover = Str::uuid()->toString();                 //new filename
-            $this->api->upload($albumImg, ["public_id" => $newAlbumCover]);
-            $newAlbumCover .= '.' . $albumImg->extension();
+            $newCoverName = Str::uuid()->toString();
+            $this->api->upload($albumImg, ["public_id" => $newCoverName]);
+            $newCoverName .= '.' . $albumImg->extension();
             if (!is_null($album->album_img)){
                 $oldAlbumCover = $album->album_img;
                 $this->api->destroy($oldAlbumCover);
             }
-            return $newAlbumCover;
+            return $newCoverName;
     }
 
     /**

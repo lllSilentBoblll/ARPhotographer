@@ -23,17 +23,17 @@ class AdminAlbumsController extends AdminController
     /**
      * @var AlbumsRepository
      */
-    private $albumRepository;
+    private AlbumsRepository $albumRepository;
 
     /**
      * @var CategoryRepository
      */
-    private $categoryRepository;
+    private CategoryRepository $categoryRepository;
 
     /**
      * @var AlbumEditor
      */
-    private $editor;
+    private AlbumEditor $editor;
 
     /**
      * AdminAlbumsController constructor.

@@ -20,12 +20,12 @@ class PhotoExtensionValidator
      *
      * @throws UnsupportedPhotoFormatException
      */
-    public function checkExtension(UploadedFile $photo, $key = null)
+    public function checkExtension(UploadedFile $photo, $key = null) : void
     {
         if (!array_key_exists($photo->extension(), PhotoFormatsEnum::ALLOWED_FORMATS)){
             $message = 'Неверный формат ' . (is_null($key)
                     ? 'файла (' . $photo->getClientOriginalName() . ')'
-                    : '-го файла (' . $photo->getClientOriginalName() . ')' );
+                    : $key + 1 . '-го файла (' . $photo->getClientOriginalName() . ')' );
             throw new UnsupportedPhotoFormatException($message);
         }
     }

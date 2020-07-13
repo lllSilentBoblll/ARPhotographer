@@ -1,7 +1,6 @@
 <?php
 namespace App\Repositories;
 
-use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Model;
 
@@ -39,7 +38,7 @@ abstract class Repository
      */
     public function getById($id)
     {
-        return $this->model::find($id);
+        return $this->model->find($id);
     }
 
     /**
@@ -57,5 +56,4 @@ abstract class Repository
             ->paginate($perPage);
         return $result;
     }
-
 }

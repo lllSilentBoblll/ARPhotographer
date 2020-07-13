@@ -129,23 +129,4 @@ class AlbumsRepository extends Repository
 //          $photosToDelete = Photo::whereIn('id', $photosToDelete); // = просто проверить потом
 //          $photosToDelete->delete();                                      //  =
     }
-
-    /**
-     * @param $newAlbumCover
-     * @param $id
-     */
-    public function updateAlbumCover($newAlbumCover, $id)
-    {
-        DB::table('albums')->where('id', $id)->insert([['album_img' => $newAlbumCover]]);
-    }
-
-    /**
-     * @param $id
-     * @return Builder
-     */
-    public function getOldAlbumCover($id)
-    {
-        $oldAlbumCover = DB::table('albums')->select('album_img')->where('id', $id);
-        return $oldAlbumCover;
-    }
 }
