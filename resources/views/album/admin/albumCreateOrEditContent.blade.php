@@ -8,7 +8,6 @@
         {{ ($album->exists) ? method_field('PATCH') : '' }}
         @csrf
         {{--Отображение ошибок--}}
-{{--                    @php /** @var \Illuminate\Support\ViewErrorBag $errors @endphp--}}
         @if($errors->any())
             <div class="alert alert-danger" role="alert">
                 <ul>
@@ -29,7 +28,7 @@
         <div class="d-flex flex-column col-lg-8">
             <div class="form-group">
                 <label for="Input1" style="color: #ffffff">Название альбома</label>
-                <input name="title" type="text" class="form-control" id="Input1"
+                <input name="title" type="text" class="form-control {{ $errors->get('title') ? "is-invalid" : "" }}" id="Input1"
                        value="{{ old('title', $album->title) }}" required>
             </div>
 

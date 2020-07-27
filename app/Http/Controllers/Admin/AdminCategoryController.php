@@ -117,7 +117,7 @@ class AdminCategoryController extends AdminController
         if ($result){
             return redirect()->route('adminCategoryIndex')->with(['success' => 'Категория удалена']);
         }else{
-            return back()->withErrors(['msg' => 'Ошибка удаления']);
+            return back()->withErrors(['msg' => 'Эту категорию нельзя удалять']);
         }
     }
 }

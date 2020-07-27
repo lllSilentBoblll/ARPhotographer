@@ -20,12 +20,17 @@ class CategoryEditor
     }
 
     /**
+     * Запрет удаления первой (дефолтной) категории.
+     * Deny to delete first (default) category.
      * @param $id
      * @return int
      */
     public function deleteCategory($id)
     {
-        return $this->categoryRepository->delete($id);
+        if ($id != 1) {
+            return $this->categoryRepository->delete($id);
+        }
+        return 0;
     }
 
     /**

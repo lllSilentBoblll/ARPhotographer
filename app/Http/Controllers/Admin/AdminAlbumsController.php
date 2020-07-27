@@ -170,7 +170,7 @@ class AdminAlbumsController extends AdminController
 
         if ($result){
             return redirect()
-                ->route('adminAlbumsIndex', $album->id)
+                ->route('adminAlbumsIndex')
                 ->with(['success' => 'Сохранено']);
         } else {
             return back()
@@ -194,8 +194,5 @@ class AdminAlbumsController extends AdminController
     }
     public function trash()
     {
-        $this->title = 'Корзина';
-        $this->template = '';
-        $deletedAlbums = $this->albumRepository->getAllTrashed(9);
     }
 }

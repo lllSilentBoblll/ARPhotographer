@@ -3,7 +3,7 @@
     <main class="main-wrapper" id="container">
         <div class="wrapper">
             <div>
-                <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 masonry">
+                <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 masonry">
 
                     @foreach($photos as $photo)
                         <li class="masonry-item grid">

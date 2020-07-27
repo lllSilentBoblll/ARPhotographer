@@ -6,7 +6,6 @@ namespace App\Repositories;
 use App\Album;
 use App\Album as Model;
 use Illuminate\Contracts\Pagination\Paginator;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 
 

@@ -4,6 +4,3 @@
 @section('navbar')
     @include('album.admin.navbar')
 @endsection
-
-
-
