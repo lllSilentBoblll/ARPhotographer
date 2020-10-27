@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Album
  * @package App
+ * @property int id
  */
 class Album extends Model
 {
-    use SoftDeletes;
 
     protected $fillable = ['title', 'customer', 'model', 'camera', 'category_id', 'description', 'album_img'];
 

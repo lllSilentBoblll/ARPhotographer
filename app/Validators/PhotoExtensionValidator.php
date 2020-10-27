@@ -23,9 +23,9 @@ class PhotoExtensionValidator
     public function checkExtension(UploadedFile $photo, $key = null) : void
     {
         if (!array_key_exists($photo->extension(), PhotoFormatsEnum::ALLOWED_FORMATS)){
-            $message = 'Неверный формат ' . (is_null($key)
-                    ? 'файла (' . $photo->getClientOriginalName() . ')'
-                    : $key + 1 . '-го файла (' . $photo->getClientOriginalName() . ')' );
+            $message = __('infoMessages.invalidFormat') . (is_null($key)
+                    ? __('infoMessages.file') . '[' . $photo->getClientOriginalName() . ']'
+                    : $key + 1 . ' ' . __('infoMessages.file') . '[' . $photo->getClientOriginalName() . ']' );
             throw new UnsupportedPhotoFormatException($message);
         }
     }

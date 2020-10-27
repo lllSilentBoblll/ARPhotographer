@@ -27,13 +27,13 @@ Route::get('/callback', function (){
 });
 
 //home
-Route::resource('/','IndexController',[        //todo поменять на get
+Route::resource('/','IndexController',[
     'only' => ['index'],
     'names' => ['index' => 'home']
     ]);
 
 //albums
-Route::resource('albums', 'AlbumController',    //todo поменять на get
+Route::resource('albums', 'AlbumController',
     [
     'only' => ['index', 'show']
     ]);

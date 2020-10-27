@@ -88,7 +88,8 @@ class AlbumEditor
             return $newCoverName;
     }
 
-    /**
+    /** Удаление фото по ID с БД + связи + из облака
+     * Deleting photos by IDs from DB, relations and from cloudinary
      * @param $photosToDeleteIDS
      */
     public function deletePhotosFromAlbum($photosToDeleteIDS)

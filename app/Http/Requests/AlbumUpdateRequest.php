@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class AlbumUpdateRequest
+ * @package App\Http\Requests
+ * @property array photosToDelete
+ */
 class AlbumUpdateRequest extends FormRequest
 {
     /**

@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Album;
+use App\Exceptions\DeleteAlbumException;
 use App\Exceptions\UnsupportedPhotoFormatException;
 use App\Http\Requests\AlbumCreateRequest;
 use App\Http\Requests\AlbumUpdateRequest;
 use App\Repositories\AlbumsRepository;
 use App\Repositories\CategoryRepository;
 use App\Services\AlbumEditor;
+use App\Services\AlbumService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
@@ -93,34 +95,20 @@ class AdminAlbumsController extends AdminController
     /**
      * @param AlbumCreateRequest $request
      * @param Album $album
-     * @return RedirectResponse
+     * @param AlbumService $service
      * @throws \Throwable
      */
-    public function store(AlbumCreateRequest $request, Album $album)
+    public function store(AlbumCreateRequest $request, Album $album, AlbumService $service)
     {
-        $data = $request->all();
-        $album->fill($data)->saveOrFail();
-        $id = $album->id;
         try {
-            if ($request->hasFile('album_img')){
-                $data['album_img'] = $this->editor->updateCover($request, $album);
-            }
-            $this->editor->uploadPhotos($request, $id);
+            $service->saveAlbum($request, $album);
+            $response = redirect()->route('adminAlbumsIndex')->with(['success' => __('infoMessages.albumCreated')]);
         } catch (UnsupportedPhotoFormatException $e) {
-            return back()->withErrors(['msg' => $e->getMessage()]);
+            $response = back()->withErrors(['msg' => $e->getMessage()]);
+        } catch (\Exception $e) {
+            $response = back()->withErrors(['msg' => __('infoMessages.createFailure')])->withInput();
         }
-//        $album->photos()->sync($request->get('photos'));     //синхронизация фотографий,  не проверенно
-
-        $result = $album->update($data);
-        if ($result) {
-            return redirect()
-                ->route('adminAlbumsIndex')
-                ->with(['success' => 'Альбом создан успешно']);
-        } else {
-            return back()
-                ->withErrors(['msg' => 'Ошибка создания нового альбома'])
-                ->withInput();
-        }
+        return $response;
     }
 
 
@@ -145,54 +133,35 @@ class AdminAlbumsController extends AdminController
     /**
      * @param AlbumUpdateRequest $request
      * @param $id
+     * @param AlbumService $albumService
      * @return RedirectResponse
      */
-    public function update(AlbumUpdateRequest $request, $id)
+    public function update(AlbumUpdateRequest $request, $id, AlbumService $albumService)
     {
-        $data = $request->all();
-        $album = $this->albumRepository->getAlbumWithPhotosById($id);
-
         try {
-            if ($request->hasFile('album_img')) {
-                $data['album_img'] = $this->editor->updateCover($request, $album);
-            }
-            $this->editor->uploadPhotos($request, $id);
+            $albumService->updateAlbum($request, $id);
+            $response = redirect()->route('adminAlbumsIndex')->with(['success' => 'Сохранено']);
         } catch (UnsupportedPhotoFormatException $e) {
-            return back()->withErrors(['msg' => $e->getMessage()]);
+            $response = back()->withErrors(['msg' => $e->getMessage()]);
+        } catch (\Exception $e) {
+            $response = back()->withErrors(['msg' => __('infoMessages.saveFailure')])->withInput();
         }
-
-        if ($request->has('photosToDelete')){
-            $this->editor->deletePhotosFromAlbum($data['photosToDelete']);
-            return back()->with(['success' => 'Выбранные фото были удалены']);
-        }
-
-        $result = $album->update($data);
-
-        if ($result){
-            return redirect()
-                ->route('adminAlbumsIndex')
-                ->with(['success' => 'Сохранено']);
-        } else {
-            return back()
-                ->withErrors(['msg' => 'Не удалось сохранить'])
-                ->withInput();
-        }
+        return $response;
     }
 
     /**
      * @param $id
+     * @param AlbumService $albumService
      * @return RedirectResponse
      */
-    public function destroy($id)
+    public function destroy($id, AlbumService $albumService)
     {
-        $result = Album::destroy($id);
-        if($result) {
-            return redirect()->route('adminAlbumsIndex')->with(['success' => 'Альбом удален']);
-        } else {
-            return back()->withErrors(['msg' => 'Ошибка удаления альбома']);
+        try {
+            $albumService->deleteAlbum($id);
+            $response = redirect()->route('adminAlbumsIndex')->with(['success' => __('infoMessages.albumDeleted')]);
+        } catch (DeleteAlbumException $e) {
+            $response = back()->withErrors(['msg' => $e->getMessage()]);
         }
-    }
-    public function trash()
-    {
+        return $response;
     }
 }
