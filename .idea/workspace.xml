@@ -5,22 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e715b5c4-fb61-46b3-a060-902e18849673" name="Default Changelist" comment="reps">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/DeleteAlbumException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/UpdateAlbumException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/AlbumService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/exceptionMessages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/exceptionMessages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.dist" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/album.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/album.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Album.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Album.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAlbumsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAlbumsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AlbumUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AlbumUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminPostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/Album.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Album.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CategoryCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CategoryCreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/AlbumObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/AlbumObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/AlbumsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/AlbumsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PhotosRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PhotosRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PostRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/AlbumEditor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AlbumEditor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AlbumService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AlbumService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Validators/PhotoExtensionValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Validators/PhotoExtensionValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_24_195101_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_24_195101_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +59,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpDebugGeneral" show_user_defined_constants="false" />
+  <component name="PhpDebugGeneral" break_at_first_line="true" listening_started="true" show_user_defined_constants="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="4d62d016-61a4-4a80-95d0-365f1dc65edb" name="localhost" use_path_mappings="true">
@@ -190,6 +199,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
     </include_path>
   </component>
   <component name="ProjectId" id="1OWFE9L9Btr4rQi0FchaRj2V9jr" />
@@ -203,7 +216,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Constants" value="false" />
-    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb&#10;postgresql" />
+    <property name="DatabaseDriversLRU" value="postgresql&#10;mysql&#10;mariadb" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -213,7 +226,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../wamp64/bin/php/php7.4.9/php.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -226,7 +239,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/routes/web.php" />
   </component>
   <component name="RecentsManager">
@@ -238,14 +251,14 @@
       <recent name="$PROJECT_DIR$/resources/views/album" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\album\app" />
       <recent name="D:\PHP\Projects\album\app\Http\Models" />
       <recent name="D:\PHP\Projects\album\config" />
       <recent name="D:\PHP\Projects\album\app\Http\Controllers\Admin" />
       <recent name="D:\PHP\Projects\album\resources\views\album\admin\blog" />
-      <recent name="$PROJECT_DIR$/resources/views/album/reserve" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit">
+  <component name="RunManager" selected="PHP Remote Debug.album">
     <configuration name="phpunit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\PhotoExtensionValidatorTest" file="$PROJECT_DIR$/tests/Feature/PhotoExtensionValidatorTest.php" scope="XML" />
       <method v="2" />
@@ -259,8 +272,12 @@
       <CommandLine parameters="-dxdebug.remote_enable=1 -dxdebug.remote_mode=req -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1" />
       <method v="2" />
     </configuration>
+    <configuration name="album" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="NOT_FILTER" server_name="album">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="PHP Built-in Web Server.server" />
+      <item itemvalue="PHP Remote Debug.album" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.phpunit" />
     </list>
@@ -833,6 +850,42 @@
       <workItem from="1603553304096" duration="599000" />
       <workItem from="1603570822552" duration="595000" />
       <workItem from="1603809139566" duration="1755000" />
+      <workItem from="1603810919180" duration="1988000" />
+      <workItem from="1605285652269" duration="1338000" />
+      <workItem from="1605462415808" duration="632000" />
+      <workItem from="1605648425380" duration="203000" />
+      <workItem from="1606111085265" duration="736000" />
+      <workItem from="1606760338837" duration="594000" />
+      <workItem from="1607707715235" duration="166000" />
+      <workItem from="1607707973861" duration="1794000" />
+      <workItem from="1607709905150" duration="2172000" />
+      <workItem from="1607982041155" duration="22000" />
+      <workItem from="1608730367117" duration="605000" />
+      <workItem from="1609277966403" duration="43000" />
+      <workItem from="1609278205232" duration="15000" />
+      <workItem from="1609278603270" duration="10000" />
+      <workItem from="1609278972876" duration="2000" />
+      <workItem from="1610380430945" duration="846000" />
+      <workItem from="1610528143093" duration="23000" />
+      <workItem from="1610537316154" duration="1179000" />
+      <workItem from="1610538514599" duration="821000" />
+      <workItem from="1610539387588" duration="1902000" />
+      <workItem from="1610541360175" duration="1782000" />
+      <workItem from="1610543166203" duration="1826000" />
+      <workItem from="1610545017579" duration="1596000" />
+      <workItem from="1610619836236" duration="764000" />
+      <workItem from="1610624078551" duration="631000" />
+      <workItem from="1610869550567" duration="1067000" />
+      <workItem from="1610871340308" duration="1310000" />
+      <workItem from="1611403024393" duration="1211000" />
+      <workItem from="1611475424540" duration="98000" />
+      <workItem from="1611478788607" duration="1905000" />
+      <workItem from="1611480722564" duration="1293000" />
+      <workItem from="1611483174187" duration="638000" />
+      <workItem from="1611485714496" duration="595000" />
+      <workItem from="1611938633770" duration="593000" />
+      <workItem from="1612455747105" duration="640000" />
+      <workItem from="1612652035284" duration="690000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <created>1559471289475</created>
@@ -921,38 +974,74 @@
     <option name="LAST_COMMIT_MESSAGE" value="reps" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="845" y="383" key="#Notifications" timestamp="1602004164549">
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1610545127336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="845" y="383" key="#Notifications/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1602004164549" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596998605504">
+    <state x="540" y="175" key="#CLI_Interpreters/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545127336" />
+    <state x="729" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611479850246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1596998605504" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1601999087159">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1601999087159" />
+    <state x="729" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1611479850246" />
     <state x="596" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602933512373">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="596" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1602933512373" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601998558329">
+    <state x="644" y="151" key="#phpunit" timestamp="1610544337142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1601998558329" />
-    <state x="707" y="364" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601999109657">
+    <state x="644" y="151" key="#phpunit/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610544337142" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1610545123921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="707" y="364" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1601999109657" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601999600202">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545123921" />
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1610545993311">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1601999600202" />
-    <state width="223" height="457" key="HiddenNamespacesPopup" timestamp="1595516057707">
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1610545993311">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="223" height="457" key="HiddenNamespacesPopup/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1595516057707" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.1.bottom" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.1.center" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.1.center/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.1.left" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.1.left/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.1.right" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.1.right/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.2.bottom" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.2.center" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.2.center/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.2.left" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.2.left/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
+    <state width="1877" height="273" key="GridCell.Tab.2.right" timestamp="1610545993311">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="273" key="GridCell.Tab.2.right/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610545993311" />
     <state x="769" y="243" key="NewPhpClassDialog" timestamp="1602946326926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -961,20 +1050,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1603387257400" />
-    <state x="533" y="211" key="SettingsEditor" timestamp="1595609727396">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1611480248435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="533" y="211" key="SettingsEditor/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1595609727396" />
-    <state x="667" y="255" width="585" height="530" key="find.popup" timestamp="1594818992012">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1611480248435" />
+    <state x="779" y="170" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610540307669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="255" width="585" height="530" key="find.popup/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1594818992012" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601999108158">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1601999108158" />
+    <state x="779" y="170" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/-1680.23.1680.1010@0.0.1920.1040" timestamp="1610540307669" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAlbumsController.php</url>
+          <line>84</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAlbumsController.php</url>
+          <line>85</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="index.php">
         <watch expression="$this-&gt;albumRepository" />

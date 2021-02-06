@@ -3,8 +3,8 @@
 
 namespace App\Repositories;
 
-use App\Album;
-use App\Category as Model;
+use App\Models\Album;
+use App\Models\Category as Model;
 
 class CategoryRepository extends Repository
 {

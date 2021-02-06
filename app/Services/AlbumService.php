@@ -3,7 +3,7 @@
 
 namespace App\Services;
 
-use App\Album;
+use App\Models\Album;
 use App\Exceptions\DeleteAlbumException;
 use App\Exceptions\UnsupportedPhotoFormatException;
 use App\Exceptions\UpdateAlbumException;

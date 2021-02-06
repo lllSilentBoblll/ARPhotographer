@@ -3,8 +3,8 @@
 
 namespace App\Repositories;
 
-use App\Post;
-use App\Post as Model;
+use App\Models\Post;
+use App\Models\Post as Model;
 
 class PostRepository extends Repository
 {

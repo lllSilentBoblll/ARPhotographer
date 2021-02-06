@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Category;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CategoryCreateRequest extends FormRequest

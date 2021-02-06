@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Album;
+use App\Models\Album;
 use App\Observers\AlbumObserver;
 use App\View\Components\Testing;
 use Illuminate\Support\Facades\Blade;

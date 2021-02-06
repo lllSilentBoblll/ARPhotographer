@@ -3,8 +3,8 @@
 
 namespace App\Repositories;
 
-use App\Album;
-use App\Album as Model;
+use App\Models\Album;
+use App\Models\Album as Model;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 

@@ -1,7 +1,7 @@
 <?php
 namespace App\Services;
 
-use App\Album;
+use App\Models\Album;
 use App\Exceptions\UnsupportedPhotoFormatException;
 use App\Repositories\AlbumsRepository;
 use App\Repositories\PhotosRepository;
@@ -43,7 +43,7 @@ class AlbumEditor
      * Создаем уникальные имена для фотографий и добавляем к ним расширение файла
      * Загружаем через Cloudinary api в облако
      * Create unique names for photos and add a file extension to them
-     * Upload photo with Cloudinary api in cloud
+     * Upload photo with Cloudinary api to  cloud
      *
      * @param Request $request
      * @param $id

@@ -3,7 +3,7 @@
 
 namespace App\Repositories;
 
-use App\Photo as Model;
+use App\Models\Photo as Model;
 
 class PhotosRepository extends Repository
 {

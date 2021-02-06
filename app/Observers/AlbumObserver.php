@@ -2,14 +2,14 @@
 
 namespace App\Observers;
 
-use App\Album;
+use App\Models\Album;
 
 class AlbumObserver
 {
     /**
      * Handle the album "created" event.
      *
-     * @param  \App\Album  $album
+     * @param Album $album
      * @return void
      */
     public function created(Album $album)
@@ -20,7 +20,7 @@ class AlbumObserver
     /**
      * Handle the album "updated" event.
      *
-     * @param  \App\Album  $album
+     * @param Album $album
      * @return void
      */
     public function updated(Album $album)
@@ -40,7 +40,7 @@ class AlbumObserver
     /**
      * Handle the album "deleted" event.
      *
-     * @param  \App\Album  $album
+     * @param Album $album
      * @return void
      */
     public function deleted(Album $album)
@@ -51,7 +51,7 @@ class AlbumObserver
     /**
      * Handle the album "restored" event.
      *
-     * @param  \App\Album  $album
+     * @param Album $album
      * @return void
      */
     public function restored(Album $album)
@@ -62,7 +62,7 @@ class AlbumObserver
     /**
      * Handle the album "force deleted" event.
      *
-     * @param  \App\Album  $album
+     * @param Album $album
      * @return void
      */
     public function forceDeleted(Album $album)

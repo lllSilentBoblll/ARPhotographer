@@ -25,7 +25,7 @@ class PhotoExtensionValidator
         if (!array_key_exists($photo->extension(), PhotoFormatsEnum::ALLOWED_FORMATS)){
             $message = __('infoMessages.invalidFormat') . (is_null($key)
                     ? __('infoMessages.file') . '[' . $photo->getClientOriginalName() . ']'
-                    : $key + 1 . ' ' . __('infoMessages.file') . '[' . $photo->getClientOriginalName() . ']' );
+                    : ++$key . ' ' . __('infoMessages.file') . '[' . $photo->getClientOriginalName() . ']' );
             throw new UnsupportedPhotoFormatException($message);
         }
     }

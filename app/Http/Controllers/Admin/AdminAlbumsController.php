@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Album;
+use App\Models\Album;
 use App\Exceptions\DeleteAlbumException;
 use App\Exceptions\UnsupportedPhotoFormatException;
 use App\Http\Requests\AlbumCreateRequest;
